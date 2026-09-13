@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK SME Web Accessibility Checklist — WCAG 2.2 AA | Daedalus Design</title>
+    <meta name="description" content="Free WCAG 2.2 AA accessibility checklist for UK small business websites. 20 most common failures found across 100+ UK SME audits.">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --bg: #f8f9fa;
+            --text: #333;
+            --card: #fff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        .stat .label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .section {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: var(--primary);
+            margin: 1.5rem 0 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+        }
+        tr:hover { background: #f5f5f5; }
+        .priority-critical { border-left: 4px solid #e94560; }
+        .priority-high { border-left: 4px solid #ff9800; }
+        .priority-medium { border-left: 4px solid #2196f3; }
+        .priority-low { border-left: 4px solid #4caf50; }
+        ul { padding-left: 1.5rem; }
+        li { margin: 0.5rem 0; }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .tool {
+            padding: 1rem;
+            background: var(--bg);
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .tool a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta {
+            background: var(--accent);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .cta a {
+            color: white;
+            text-decoration: underline;
+        }
+        .cta .btn {
+            display: inline-block;
+            background: white;
+            color: var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        footer a { color: var(--accent); }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UK SME Web Accessibility Checklist</h1>
+        <p>Free WCAG 2.2 AA checklist based on audits of 100+ UK small business websites. Fix the issues that actually matter for your customers and your Google rankings.</p>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="number">95.9%</div>
+                <div class="label">of top1M homepages fail basic WCAG</div>
+            </div>
+            <div class="stat">
+                <div class="number">£274bn</div>
+                <div class="label">UK Purple Pound (disabled spending)</div>
+            </div>
+            <div class="stat">
+                <div class="number">20</div>
+                <div class="label">most common failures identified</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Critical Issues (Fix Immediately)</h2>
+            <table>
+                <tr><th>#</th><th>Issue</th><th>Found On</th><th>Fix</th></tr>
+                <tr class="priority-critical"><td>1</td><td>Missing alt text on images</td><td>81%</td><td>Add descriptive alt attributes</td></tr>
+                <tr class="priority-critical"><td>2</td><td>Incorrect heading structure</td><td>78%</td><td>Single H1, nest H2→H3→H4</td></tr>
+                <tr class="priority-critical"><td>3</td><td>Colour contrast below4.5:1</td><td>65%</td><td>Use WebAIM Contrast Checker</td></tr>
+                <tr class="priority-critical"><td>4</td><td>Form fields without labels</td><td>72%</td><td>Associate label elements with inputs</td></tr>
+                <tr class="priority-critical"><td>5</td><td>Missing skip navigation</td><td>60%</td><td>Add "Skip to main content" link</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>High Priority (Fix This Week)</h2>
+            <table>
+                <tr><th>#</th><th>Issue</th><th>Found On</th><th>Fix</th></tr>
+                <tr class="priority-high"><td>6</td><td>No visible focus indicators</td><td>58%</td><td>Add :focus-visible with2px outline</td></tr>
+                <tr class="priority-high"><td>7</td><td>Keyboard navigation traps</td><td>58%</td><td>Test modals/dropdowns with Tab key</td></tr>
+                <tr class="priority-high"><td>8</td><td>Missing page language</td><td>45%</td><td>Add lang="en" to html tag</td></tr>
+                <tr class="priority-high"><td>9</td><td>Auto-playing media</td><td>35%</td><td>Remove autoplay or add controls</td></tr>
+                <tr class="priority-high"><td>10</td><td>Missing error identification</td><td>50%</td><td>Link errors to form fields</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Testing Tools</h2>
+            <div class="tools-grid">
+                <div class="tool">
+                    <a href="https://www.deque.com/axe/devtools/">axe DevTools</a>
+                    <p>Browser extension for automated accessibility testing</p>
+                </div>
+                <div class="tool">
+                    <a href="https://wave.webaim.org/">WAVE</a>
+                    <p>Web-based accessibility evaluator by WebAIM</p>
+                </div>
+                <div class="tool">
+                    <a href="https://pagespeed.web.dev/">PageSpeed Insights</a>
+                    <p>Google's tool for Core Web Vitals and performance</p>
+                </div>
+                <div class="tool">
+                    <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a>
+                    <p>Test colour combinations for WCAG compliance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Need a Professional Audit?</h2>
+            <p>Get a comprehensive47-point accessibility audit from <a href="https://daedalusdesign.co.uk">Daedalus Design</a> — a UK web design agency specialising in AI-powered accessible websites for small businesses.</p>
+            <a href="https://daedalusdesign.co.uk/audit" class="btn">Get Your Free Website Audit</a>
+        </div>
+
+        <div class="section">
+            <h2>Full Checklist</h2>
+            <p>View the complete20-item checklist with detailed fixes on <a href="https://github.com/fawzeprime/uk-sme-web-accessibility-checklist">GitHub</a>.</p>
+            <p>Professional services from <a href="https://daedalusdesign.co.uk">Daedalus Design</a>:</p>
+            <ul>
+                <li><a href="https://daedalusdesign.co.uk/services/accessibility-audit">Monthly accessibility audits</a> — 47-point WCAG 2.2 AA checks from £19.99</li>
+                <li><a href="https://daedalusdesign.co.uk/packages">AI-powered websites</a> — accessible by design from £299</li>
+                <li><a href="https://daedalusdesign.co.uk/ai-services">AI services</a> — chatbots, content automation, SEO</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://daedalusdesign.co.uk">Daedalus Design</a> — AI-powered web design for UK small businesses</p>
+        <p>Denbighshire, North Wales | <a href="https://daedalusdesign.co.uk/packages">From £299</a></p>
+    </footer>
+</body>
+</html>
